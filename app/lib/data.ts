@@ -20,6 +20,7 @@ export async function fetchRevenue() {
     // Artificially delay a reponse for demo purposes.
     // Don't do this in real life :)
 
+    // Testing React Suspense and Data Streaming
     console.log('Fetching revenue data...')
     await new Promise((resolve) => setTimeout(resolve, 3000))
 
@@ -38,6 +39,11 @@ export async function fetchLatestInvoices() {
   noStore()
 
   try {
+    // My code
+    console.log('Fetching invoices data...')
+    await new Promise((resolve) => setTimeout(resolve, 5000))
+    console.log('Data fetch complete after 5 seconds.')
+
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices
