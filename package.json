@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbo",
-    "dev2": "next dev",
+    "dev2": "next dev --turbo",
+    "dev": "next dev",
     "start": "next start",
     "seed": "node -r dotenv/config ./scripts/seed.js"
   },
